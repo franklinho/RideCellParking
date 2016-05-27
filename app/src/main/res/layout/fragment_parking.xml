@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvNameLabel"
+        android:layout_alignParentTop="true"
+        android:text="Name:"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvNumberLabel"
+        android:layout_below="@id/tvNameLabel"
+        android:text="Number:"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvChargeLabel"
+        android:text="Price Per Minute:"
+        android:layout_below="@id/tvNumberLabel"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvName"
+        android:layout_alignTop="@id/tvNameLabel"
+        android:layout_toRightOf="@id/tvChargeLabel"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvNumber"
+        android:layout_alignTop="@id/tvNumberLabel"
+        android:layout_toRightOf="@id/tvChargeLabel"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvCharge"
+        android:layout_alignTop="@id/tvChargeLabel"
+        android:layout_toRightOf="@id/tvChargeLabel"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvMinReserveLabel"
+        android:layout_below="@id/tvChargeLabel"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Minimum Reservation Length:"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvMinReserve"
+        android:layout_alignTop="@id/tvMinReserveLabel"
+        android:layout_toRightOf="@id/tvMinReserveLabel"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvMaxReserveLabel"
+        android:layout_below="@id/tvMinReserveLabel"
+        android:layout_marginBottom="10dp"
+        android:text="Maximum Reservation Length:"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvMaxReserve"
+        android:layout_alignTop="@id/tvMaxReserveLabel"
+        android:layout_toRightOf="@id/tvMaxReserveLabel"
+        android:layout_marginLeft="10dp"
+        />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@id/tvMaxReserveLabel"
+        android:background="@android:color/darker_gray"
+        android:id="@+id/vDivider"></View>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etReservationTime"
+        android:layout_below="@id/vDivider"
+        android:layout_marginTop="10dp"
+        android:inputType="number"
+        android:hint="Enter Reservation Length Here"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="Reserve"
+        android:id="@+id/btnReserve"
+        android:layout_below="@id/etReservationTime"
+        style="@style/CustomColoredButtonStyle"
+        android:layout_marginTop="10dp" />
+
+    <ProgressBar xmlns:android="http://schemas.android.com/apk/res/android"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:id="@+id/pbProgessAction" />
+
+</RelativeLayout>
